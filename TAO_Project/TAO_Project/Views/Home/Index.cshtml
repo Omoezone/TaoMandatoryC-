@@ -2,6 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <div class="jumbotron" style="margin-top:25px">
     <table class="table">
         <thead>
@@ -19,8 +20,19 @@
                     <td>@calculator.grant kr.</td>
                     <td>@calculator.yearlyDiscount kr/år.</td>
                 </tr>
-                
+
             }
         </tbody>
     </table>
+   
 </div>
+
+<form action="/" style="display:flex">
+    <label style="margin-right:5px" for="pnummer">Postnummer:</label><br>
+    <input style="margin-right:10px" align="left" type="text" id="pnummer" value="Postnummer"><br>
+    <label style="margin-right:5px" for="adresse">Adresse:</label><br>
+    <input style="margin-right:10px" align="left" type="text" id="adresse" value="Adresse"><br>
+    <label style="margin-right:5px" for="husnummer">Husnummer:</label><br>
+    <input style="margin-right:10px" align="left" type="text" id="husnummer" value="Husnummer"><br>
+    <input style="margin-left:15px" align="left" type="submit" value="Beregn tilskud">
+</form>
