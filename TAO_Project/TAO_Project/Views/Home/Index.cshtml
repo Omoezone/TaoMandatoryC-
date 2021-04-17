@@ -2,13 +2,13 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <table>
+<div class="jumbotron" style="margin-top:25px">
+    <table class="table">
         <thead>
             <tr>
-                <td><b>Energiforbedring</b></td>
-                <td><b>Tilskud</b></td>
-                <td><b>Årlig besparelse</b></td>
+                <th scope="col"><b>Energiforbedring</b></th>
+                <th scope="col"><b>Tilskud</b></th>
+                <th scope="col"><b>Årlig besparelse</b></th>
             </tr>
         </thead>
         <tbody>
@@ -16,29 +16,11 @@
             {
                 <tr>
                     <td>@calculator.energyImprovement</td>
-                    <td>@calculator.grant</td>
-                    <td>@calculator.yearlyDiscount</td>
+                    <td>@calculator.grant kr.</td>
+                    <td>@calculator.yearlyDiscount kr/år.</td>
                 </tr>
                 
             }
         </tbody>
     </table>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            @ViewBag.discounts.calculators[0].ToString()
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
 </div>
