@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<div style="margin-top:200px">
+<div style="margin-top:200px; min-height: calc(100vh - 125px);">
     <form action="@Url.Action("Index","Calculation")" style="display:flex">
         <label style="margin-right:5px" for="pnummer">Postnummer:</label><br>
         <input style="margin-right:10px" align="left" type="text" id="pnummer" placeholder="Postnummer"><br>
