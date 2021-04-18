@@ -1,9 +1,20 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-
-<div class="jumbotron" style="margin-top:25px">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div style="margin-top:200px">
+    <form action="/" style="display:flex">
+        <label style="margin-right:5px" for="pnummer">Postnummer:</label><br>
+        <input style="margin-right:10px" align="left" type="text" id="pnummer" placeholder="Postnummer"><br>
+        <label style="margin-right:5px" for="adresse">Adresse:</label><br>
+        <input style="margin-right:10px" align="left" type="text" id="adresse" placeholder="Adresse"><br>
+        <label style="margin-right:5px" for="husnummer">Husnummer:</label><br>
+        <input style="margin-right:10px" align="left" type="text" id="husnummer" placeholder="Husnummer"><br>
+        <input id="bud" style="margin-left:15px" align="left" type="submit" value="Beregn tilskud">
+    </form>
+</div>
+<div id="hidden" class="jumbotron" style="margin-top:25px">
+    <!-- Maybe use ;visibility:hidden with some javascript or something onclick -->
     <table class="table">
         <thead>
             <tr>
@@ -24,15 +35,12 @@
             }
         </tbody>
     </table>
-   
-</div>
 
-<form action="/" style="display:flex">
-    <label style="margin-right:5px" for="pnummer">Postnummer:</label><br>
-    <input style="margin-right:10px" align="left" type="text" id="pnummer" value="Postnummer"><br>
-    <label style="margin-right:5px" for="adresse">Adresse:</label><br>
-    <input style="margin-right:10px" align="left" type="text" id="adresse" value="Adresse"><br>
-    <label style="margin-right:5px" for="husnummer">Husnummer:</label><br>
-    <input style="margin-right:10px" align="left" type="text" id="husnummer" value="Husnummer"><br>
-    <input style="margin-left:15px" align="left" type="submit" value="Beregn tilskud">
-</form>
+</div>
+<script>
+    $('#bud').on('click', function (e) {
+        $('#hidden').toggle('visible');
+    });
+</script>
+
+
